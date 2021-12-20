@@ -8,7 +8,8 @@
   "dependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "gilp-util": "0.0.11"
   },
   "devDependencies": {
     "gulp": "^4.0.2"
