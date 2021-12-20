@@ -1,0 +1,417 @@
+extends _template.pug
+include ../components/side-title/side-title.pug
+include ../components/menu-link/menu-link.pug
+include ../components/main-title/main-title.pug
+include ../components/content-title/content-title.pug
+include ../components/content-block-wrap/content-block-wrap.pug
+include ../components/image/image.pug
+include ../components/status-bar/status-bar.pug
+include ../components/user-bar/user-bar.pug
+include ../components/content-title/content-title.pug
+include ../components/user-bar/user-bar.pug
+include ../components/user-pic/user-pic.pug
+include ../components/like-button/like-button.pug
+include ../components/user/user.pug
+include ../components/content-subtitle/content-subtitle.pug
+include ../components/progress-bar/progress-bar.pug
+include ../components/button/button.pug
+include ../components/button-theme/button-theme.pug
+include ../components/ico-svg/ico-svg.pug
+
+append section
+    main.page__main.main
+        h1.visually-hidden Skateboard
+        .container-fluid
+            .row.center-sm
+                .col-xs-12.col-md-3.col-lg-2
+                    .row.center-sm.start-md.vertical-gap-xs-s
+                        .col-xs-12.col-sm-5.col-md-12.col-lg-12.vertical-gap-md-m.sidebar.center-xs.start-md.vertical-gap-xs-s
+                            +side-title({titleText: 'MENU'})(class='sidebar__title')
+                            .row
+                                .col-xs-6.col-sm-12
+                                    +menu-link({
+                                        href: '#',
+                                        text: 'Discover'
+                                    })(class='sidebar__menu-link')
+                                        +ico-svg({
+                                            icoName: 'discover',
+                                            size: 'lg',
+                                            theme: 'primary'
+                                        })
+                                .col-xs-6.col-sm-12
+                                    +menu-link({
+                                        active: true,
+                                        href: '#',
+                                        text: 'Trending'
+                                    })(class='sidebar__menu-link ')
+                                        +ico-svg({
+                                            icoName: 'trending',
+                                            size: 'lg',
+                                            theme: 'accent'
+                                        })
+                                .col-xs-6.col-sm-12
+                                    +menu-link({
+                                        href: '#',
+                                        text: 'Streaming'
+                                    })(class='sidebar__menu-link')
+                                        +ico-svg({
+                                            icoName: 'streaming',
+                                            size: 'lg',
+                                            theme: 'primary'
+                                        })
+                                .col-xs-6.col-sm-12
+                                    +menu-link({
+                                        href: '#',
+                                        text: 'Playlist'
+                                    })(class='sidebar__menu-link')
+                                        +ico-svg({
+                                            icoName: 'playlist',
+                                            size: 'lg',
+                                            theme: 'primary'
+                                        })
+                                .col-xs-6.col-sm-12
+                                    +menu-link({
+                                        href: '#',
+                                        text: 'Bookmark'
+                                    })(class='sidebar__menu-link')
+                                        +ico-svg({
+                                            icoName: 'bookmark',
+                                            size: 'lg',
+                                            theme: 'primary'
+                                        })
+                        .col-xs-12.col-sm-5.col-md-12.col-lg-12.vertical-gap-md-m.sidebar.center-xs.start-md.vertical-gap-xs-s
+                            +side-title({titleText: 'Category'})(class='sidebar__title')
+                            .row
+                                .col-xs-6.col-sm-12
+                                    +menu-link({
+                                        href: '#',
+                                        text: 'Live Stream'
+                                    })(class='sidebar__menu-link')
+                                        +ico-svg({
+                                            icoName: 'discover',
+                                            size: 'lg',
+                                            theme: 'primary'
+                                        })
+                                .col-xs-6.col-sm-12
+                                    +menu-link({
+                                        href: '#',
+                                        text: 'Tutorial'
+                                    })(class='sidebar__menu-link')
+                                        +ico-svg({
+                                            icoName: 'trending',
+                                            size: 'lg',
+                                            theme: 'primary'
+                                        })
+                                .col-xs-6.col-sm-12
+                                    +menu-link({
+                                        href: '#',
+                                        text: 'Competition'
+                                    })(class='sidebar__menu-link')
+                                        +ico-svg({
+                                            icoName: 'streaming',
+                                            size: 'lg',
+                                            theme: 'primary'
+                                        })
+                                .col-xs-6.col-sm-12
+                                    +menu-link({
+                                        href: '#',
+                                        text: 'Community'
+                                    })(class='sidebar__menu-link')
+                                        +ico-svg({
+                                            icoName: 'playlist',
+                                            size: 'lg',
+                                            theme: 'primary'
+                                        })
+                        .col-xs-12.col-sm-12.order-sm.first-xs
+                            +button-theme({text: 'Night mode'})
+                .col-xs-12.col-md-9.col-lg-10
+                    +main-title({titleText: 'Trending'})
+                    .row
+                        .col-xs-12.col-lg-9
+                            .row
+                                .col-xs-12.col-sm-6.col-lg-12.vertical-gap-xs-s
+                                    +content-block-wrap()
+                                        .row
+                                            .col-xs-12.col-lg-5.vertical-gap-xs-s.vertical-gap-lg-0
+                                                +image({
+                                                    src: '%=static=%img/content/cont1.png',
+                                                    width: '259',
+                                                    height: '160',
+                                                    alt: 'Content 1'
+                                                })
+                                            .col-xs-12.col-lg-7
+                                                .row
+                                                    .col-xs-10.col-sm-9.col-lg-10.vertical-gap-xs-s
+                                                        +content-title({
+                                                                titleText: 'How to do Basic Jumping and how to landing safely'
+                                                            })
+                                                    .col-xs-1.col-sm-1.col-sm-offset-1.col-lg-2.col-lg-offset-0
+                                                        +like-button()(class='content-block-wrap__button')
+                                                            +ico-svg({
+                                                                icoName: 'heart',
+                                                                size: 'sm',
+                                                                theme: 'secondary'
+                                                            })
+                                                .row.end-xs.center-sm.start-lg
+                                                    .col-xs-12
+                                                        +status-bar({
+                                                                status: '125.908 views'
+                                                            })(class='status-bar--decor status-bar--views content-block-wrap__status-bar')
+                                                        +status-bar({
+                                                                status: '47.987 likes'
+                                                            })(class='status-bar--decor status-bar--likes content-block-wrap__status-bar')
+                                                .row.end-xs.center-sm.start-lg
+                                                    .col-xs-12
+                                                        +user-pic({
+                                                            src: '%=static=%img/content/user-32-1.png',
+                                                            width: '32',
+                                                            height: '32',
+                                                            alt: 'User'
+                                                        })(class='user-pic--icon')
+                                                        +user({
+                                                            name: 'Thomas Hope',
+                                                            active: true,
+                                                            online: true,
+                                                            status: '2 days ago'
+                                                        })(class='content-block-wrap__user')
+                                .col-xs-12.col-sm-6.col-lg-12.vertical-gap-xs-s
+                                    +content-block-wrap()
+                                        .row
+                                            .col-xs-12.col-lg-5.vertical-gap-xs-s.vertical-gap-lg-0
+                                                +image({
+                                                    src: '%=static=%img/content/cont2.png',
+                                                    width: '259',
+                                                    height: '160',
+                                                    alt: 'Content 2'
+                                                })
+                                            .col-xs-12.col-lg-7
+                                                .row
+                                                    .col-xs-10.col-sm-9.col-lg-10.vertical-gap-xs-s
+                                                        +content-title({
+                                                                titleText: 'Basic how to ride your skateboard comfortly'
+                                                            })
+                                                    .col-xs-2.col-sm-offset-1.col-lg-2.col-lg-offset-0
+                                                        +like-button()(class='like-button--is-active content-block-wrap__button')
+                                                            +ico-svg({
+                                                                icoName: 'heart',
+                                                                size: 'sm',
+                                                                theme: 'is-active'
+                                                            })
+                                                .row.end-xs.center-sm.start-lg
+                                                    .col-xs-12
+                                                        +status-bar({
+                                                                    status: '125.908 views'
+                                                                })(class='status-bar--decor status-bar--views content-block-wrap__status-bar')
+                                                        +status-bar({
+                                                                    status: '47.987 likes'
+                                                                })(class='status-bar--decor status-bar--likes content-block-wrap__status-bar')
+                                                .row.end-xs.center-sm.start-lg
+                                                    .col-xs-12
+                                                        +user-pic({
+                                                            src: '%=static=%img/content/user-32-2.png',
+                                                            width: '32',
+                                                            height: '32',
+                                                            alt: 'User'
+                                                        })(class='user-pic--icon')
+                                                        +user({
+                                                            name: 'Andy William',
+                                                            active: true,
+                                                            online: true,
+                                                            status: '4 days ago',
+                                                        })(class='content-block-wrap__user')
+                                .col-xs-12.col-sm-6.col-lg-12.vertical-gap-xs-s
+                                    +content-block-wrap()
+                                        .row
+                                            .col-xs-12.col-lg-5.vertical-gap-xs-s.vertical-gap-lg-0
+                                                +image({
+                                                    src: '%=static=%img/content/cont3.png',
+                                                    width: '259',
+                                                    height: '160',
+                                                    alt: 'Content 3'
+                                                })
+                                            .col-xs-12.col-lg-7
+                                                .row
+                                                    .col-xs-10.col-sm-9.col-lg-10.vertical-gap-xs-s
+                                                        +content-title({
+                                                            titleText: 'Prepare for your first skateboard jump'
+                                                        })
+                                                    .col-xs-2.col-sm-offset-1.col-lg-2.col-lg-offset-0
+                                                        +like-button()(class='like-button--is-active content-block-wrap__button')
+                                                            +ico-svg({
+                                                                icoName: 'heart',
+                                                                size: 'sm',
+                                                                theme: 'is-active'
+                                                            })
+                                                .row.end-xs.center-sm.start-lg
+                                                    .col-xs-12
+                                                        +status-bar({
+                                                                    status: '125.908 views'
+                                                                })(class='status-bar--decor status-bar--views content-block-wrap__status-bar')
+                                                        +status-bar({
+                                                                    status: '47.987 likes'
+                                                                })(class='status-bar--decor status-bar--likes content-block-wrap__status-bar')
+                                                .row.end-xs.center-sm.start-lg
+                                                    .col-xs-12
+                                                        +user-pic({
+                                                            src: '%=static=%img/content/user-32-3.png',
+                                                            width: '32',
+                                                            height: '32',
+                                                            alt: 'User'
+                                                        })(class='user-pic--icon')
+                                                        +user({
+                                                            name: 'Johny Wise',
+                                                            active: true,
+                                                            status: '4 days ago',
+                                                        })(class='content-block-wrap__user')
+                                .col-xs-12.col-sm-6.col-lg-12.vertical-gap-xs-s
+                                    +content-block-wrap()
+                                        .row
+                                            .col-xs-12.col-lg-5.vertical-gap-xs-s.vertical-gap-lg-0
+                                                +image({
+                                                    src: '%=static=%img/content/cont4.png',
+                                                    width: '259',
+                                                    height: '160',
+                                                    alt: 'Content 4'
+                                                })
+                                            .col-xs-12.col-lg-7
+                                                .row
+                                                    .col-xs-10.col-sm-9.col-lg-10.vertical-gap-xs-s
+                                                        +content-title({
+                                                            titleText: 'Tips to playing skateboard on the ramp'
+                                                        })
+                                                    .col-xs-2.col-sm-offset-1.col-lg-2.col-lg-offset-0
+                                                        +like-button()(class='content-block-wrap__button')
+                                                            +ico-svg({
+                                                                icoName: 'heart',
+                                                                size: 'sm',
+                                                                theme: 'secondary'
+                                                            })
+                                                .row.end-xs.center-sm.start-lg
+                                                    .col-xs-12
+                                                        +status-bar({
+                                                                    status: '125.908 views'
+                                                                })(class='status-bar--decor status-bar--views content-block-wrap__status-bar')
+                                                        +status-bar({
+                                                                    status: '47.987 likes'
+                                                                })(class='status-bar--decor status-bar--likes content-block-wrap__status-bar')
+                                                .row.end-xs.center-sm.start-lg
+                                                    .col-xs-12
+                                                        +user-pic({
+                                                            src: '%=static=%img/content/user-32-4.png',
+                                                            width: '32',
+                                                            height: '32',
+                                                            alt: 'User'
+                                                        })(class='user-pic--icon')
+                                                        +user({
+                                                            name: 'Budi Hakim',
+                                                            active: true,
+                                                            status: '1 week ago'
+                                                        })(class='content-block-wrap__user')
+                        .col-xs-12.col-lg-3
+                            .row
+                                .col-xs-12.col-sm-6.col-lg-12.vertical-gap-xs-s
+                                    +content-block-wrap()
+                                        .row
+                                            .col-xs-12.vertical-gap-xs-m
+                                                +content-title({
+                                                    titleText: 'Popular Skaters'
+                                                })
+                                        .row
+                                            .col-xs.col-sm-4
+                                                .user-wrapper
+                                                    +user-pic({
+                                                        src: '%=static=%img/content/user1.png',
+                                                        width: '35',
+                                                        height: '35',
+                                                        alt: 'User'
+                                                    })(class="user-pic--bar user-pic--icon")
+                                                    +user({name: 'Thomas'})(class='user--color content-block-wrap__user')
+                                            .col-xs.col-sm-4
+                                                .user-wrapper
+                                                    +user-pic({
+                                                        src: '%=static=%img/content/user2.png',
+                                                        width: '35',
+                                                        height: '35',
+                                                        alt: 'User'
+                                                    })(class="user-pic--bar user-pic--icon")
+                                                    +user({name: 'Jony'})(class='user--color content-block-wrap__user')
+                                            .col-xs.col-sm-4
+                                                .user-wrapper
+                                                    +user-pic({
+                                                        src: '%=static=%img/content/user3.png',
+                                                        width: '35',
+                                                        height: '35',
+                                                        alt: 'User'
+                                                    })(class="user-pic--bar user-pic--icon")
+                                                    +user({name: 'Tony'})(class='user--color content-block-wrap__user')
+                                            .col-xs.col-sm-4
+                                                .user-wrapper
+                                                    +user-pic({
+                                                        src: '%=static=%img/content/user4.png',
+                                                        width: '35',
+                                                        height: '35',
+                                                        alt: 'User'
+                                                    })(class="user-pic--bar user-pic--icon")
+                                                    +user({name: 'Bludi'})(class='user--color content-block-wrap__user')
+                                            .col-xs.col-sm-4
+                                                .user-wrapper
+                                                    +user-pic({
+                                                        src: '%=static=%img/content/user5.png',
+                                                        width: '35',
+                                                        height: '35',
+                                                        alt: 'User'
+                                                    })(class="user-pic--bar user-pic--icon")
+                                                    +user({name: 'Andi'})(class='user--color content-block-wrap__user')
+                                            .col-xs.col-sm-4
+                                                .user-wrapper
+                                                    +user-pic({
+                                                        src: '%=static=%img/content/user6.png',
+                                                        width: '35',
+                                                        height: '35',
+                                                        alt: 'User'
+                                                    })(class="user-pic--bar user-pic--icon")
+                                                    +user({name: 'Jony'})(class='user--color content-block-wrap__user')
+                                .col-xs-12.col-sm-6.col-lg-12.vertical-gap-xs-s
+                                    +content-block-wrap()
+                                        .row
+                                            .col-xs-12.vertical-gap-xs-m
+                                                +content-title({
+                                                        titleText: 'Popular Searches'
+                                                    })
+                                        .row
+                                            .col-xs-7
+                                                +content-subtitle({subtitleText: 'Skatebord Trick'})
+                                            .col-xs-5
+                                                +status-bar({
+                                                        status: '21,983,098'
+                                                    })(class='status-bar--right content-block-wrap__status-bar')
+                                            .col-xs-12
+                                                +progress-bar({width: '50%'})(class='content-block-wrap__progress')
+                                            .col-xs-7
+                                                +content-subtitle({subtitleText: 'Tutorial skateboard flip and jump'})
+                                            .col-xs-5
+                                                +status-bar({
+                                                        status: '7,098,765'
+                                                    })(class='status-bar--right content-block-wrap__status-bar')
+                                            .col-xs-12
+                                                +progress-bar({width: '40%'})(class='content-block-wrap__progress')
+                                            .col-xs-7
+                                                +content-subtitle({subtitleText: 'First time learn using skateboard'})
+                                            .col-xs-5
+                                                +status-bar({
+                                                        status: '7,098,765'
+                                                    })(class='status-bar--right content-block-wrap__status-bar')
+                                            .col-xs-12
+                                                +progress-bar({width: '30%'})(class='content-block-wrap__progress')
+                                            .col-xs-7
+                                                +content-subtitle({subtitleText: 'Safety Equipment'})
+                                            .col-xs-5
+                                                +status-bar({
+                                                        status: '21,983,098'
+                                                    })(class='status-bar--right content-block-wrap__status-bar')
+                                            .col-xs-12
+                                                +progress-bar({width: '20%'})(class='content-block-wrap__progress')
+                                        .row
+                                            .col-xs-12
+                                                +button({button: 'See All Popular Searches'})(class='content-block-wrap__button')
+

@@ -1,0 +1,14 @@
+include ../status-bar/status-bar.pug
+include ../user-bar/user-bar.pug
+include ../content-title/content-title.pug
+include ../user-bar/user-bar.pug
+include ../like-button/like-button.pug
+
+mixin content-block(data)
+    .content-block
+        .content-block__descr-wrap
+            .content-block__descr-header
+                +content-title(data)
+                +like-button(data)
+            +status-bar(data)
+            +user-bar(data)

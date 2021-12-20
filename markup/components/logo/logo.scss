@@ -1,0 +1,15 @@
+.logo {
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &:active {
+        opacity: 0.2;
+    }
+}
+@media (max-width: $mobile-width) {
+    .logo__img {
+        width: 117px;
+        height: 16px;
+    }
+}

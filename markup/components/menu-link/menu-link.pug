@@ -1,0 +1,5 @@
+mixin menu-link(data)
+    a.menu-link(class=data.active ? 'menu-link--is-active': '' href=data.href)&attributes(attributes)
+        span.menu-link__icon
+            block
+        span.menu-link__text #{data.text}

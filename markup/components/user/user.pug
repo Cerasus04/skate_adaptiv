@@ -1,0 +1,7 @@
+mixin user(data)
+    .user&attributes(attributes)
+        p.user__name #{data.name}
+            if data.active
+                span(class=data.online ? 'user__online' : 'user__offline')
+        if data.status
+            p.user__status #{data.status}

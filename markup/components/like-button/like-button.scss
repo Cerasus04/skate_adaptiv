@@ -1,0 +1,28 @@
+.like-button {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    background-color: $border-color;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+        background-color: $active-bg;
+        .like-button__icon {
+            color: $light;
+        }
+    }
+
+    &--is-active {
+        background-color: $active-bg !important;
+    }
+}
+@media (max-width: $mobile-width) {
+    .like-button {
+        transform: scale(0.6);
+    }
+}

@@ -1,0 +1,35 @@
+.status-bar {
+    position: relative;
+    display: inline-block;
+    font-size: 11px;
+    color: $body-color;
+}
+
+.status-bar--decor {
+    margin-bottom: 15px;
+    padding: 0 10px 0 22px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 4px;
+    }
+}
+
+.status-bar--views {
+    &::before {
+        @include bg-svg($eye-gray);
+    }
+}
+.status-bar--likes {
+    &::before {
+        @include bg-svg($heart-gray);
+    }
+}
+.status-bar--right {
+    display: block;
+    text-align: right;
+}

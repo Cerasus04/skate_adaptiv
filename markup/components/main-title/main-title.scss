@@ -1,0 +1,15 @@
+.main-title {
+    padding-bottom: 25px;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+@media (max-width: $tablet-width) {
+    .main-title {
+        text-align: center;
+    }
+}

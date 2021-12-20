@@ -1,0 +1,36 @@
+.user {
+    display: inline-block;
+    margin-left: 15px;
+}
+.user--color {
+    color: $body-color;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-left: 0;
+}
+.user__name,
+.user__status  {
+    font-size: 12px;
+    margin: 0;
+}
+.user__name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.user__offline,
+.user__online {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-left: 10px;
+    background-color: brown;
+    border-radius: 50%;
+}
+.user__online {
+    background-color: aquamarine;
+}
+.user__status {
+    color: $body-color;
+}

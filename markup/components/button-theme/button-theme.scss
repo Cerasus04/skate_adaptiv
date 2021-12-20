@@ -1,0 +1,54 @@
+.theme {
+    display: flex;
+    align-items: center;
+    padding: 48px 0;
+
+    &--click {
+
+        .theme__text {
+            color: $light-link;
+        }
+
+        .theme__btn {
+            background-color: $button-bg;
+
+            &::after {
+                left: 0;
+            }
+        }
+    }
+}
+
+.theme__btn {
+    position: relative;
+    width: 40px;
+    height: 23px;
+    background-color: $theme;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 23px;
+        height: 23px;
+        border-radius: 15px;
+        background-color: $light;
+
+    }
+}
+
+.theme__text {
+    padding-left: 10px;
+    color: $body-color;
+}
+
+@media (max-width: $tablet-width) {
+    .theme {
+        justify-content: flex-end;
+        padding: 20px 0 35px;
+    }
+}

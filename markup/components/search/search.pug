@@ -1,0 +1,4 @@
+mixin search(data)
+    form.search(action=data.action method='post')
+        label.visually-hidden(for=data.id)
+        input.search__input(type='search' id=data.id name=data.name placeholder=data.placeholder)

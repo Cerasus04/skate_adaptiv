@@ -1,0 +1,9 @@
+mixin ico-svg(params)
+    - var icoNames = icoSvg;
+    - var size = params.size || 'sm';
+    - var theme = params.theme || 'inherit';
+    - var viewBox = params.theme || 'inherit';
+
+    svg(viewBox='0 0 24 24', class=`ico-svg ico-svg--${size} ico-svg--${theme}`)&attributes(attributes)
+        !='<!-- ico name: ' + params.icoName + '-->'
+        path(fill='currentColor' d=icoNames[params.icoName])

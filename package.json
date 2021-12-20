@@ -1,0 +1,21 @@
+{
+  "name": "awesome_project",
+  "version": "1.0.0",
+  "description": "Your awesome project description",
+  "main": "gulpfile.js",
+  "gh-pages": "^3.2.3",
+  "directories": {},
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "gh-pages": "^3.2.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

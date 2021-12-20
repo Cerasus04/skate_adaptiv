@@ -1,0 +1,19 @@
+include ../logo/logo.pug
+include ../search/search.pug
+include ../user-pic/user-pic.pug
+
+mixin header
+    .header
+        .container-fluid
+            .row.between-sm.middle-xs.vertical-gap-sm-m.vertical-gap-md-m.vertical-gap-lg-m
+                .col-xs-6.col-sm-3.col-md-2
+                    +logo(logo.defaults)
+                .col-xs-12.last-xs.vertical-twice-gap-xs.col-sm-6.col-md-7.col-lg-6.vertical-gap-sm-0.order-sm
+                    +search(search.defaults)
+                .col-xs-6.col-sm-1.col-lg-offset-3.end-xs
+                    +user-pic({
+                        src: '%=static=%img/content/thomas.png',
+                        width: '32',
+                        height: '32',
+                        alt: 'User'
+                    })(class="user-pic--header")

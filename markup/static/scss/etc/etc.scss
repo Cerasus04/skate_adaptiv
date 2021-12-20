@@ -1,0 +1,65 @@
+/* Uncomment and set these variables to customize the grid. */
+
+.vertical-gap-xs-s {
+    margin-bottom: 15px;
+}
+.vertical-twice-gap-xs {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.vertical-gap-xs-m {
+    margin-bottom: 48px;
+}
+.vertical-gap-xs-0 {
+    margin-bottom: 0;
+}
+
+  @media only screen and (min-width: 48em) {
+    .vertical-gap-sm-s {
+        margin-bottom: 18px;
+    }
+    .vertical-twice-gap-sm {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .vertical-gap-sm-m {
+        margin-bottom: 25px;
+    }
+    .vertical-gap-sm-0 {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+  }
+
+  @media only screen and (min-width: 62em) {
+    .vertical-gap-md-s {
+        margin-bottom: 20px;
+    }
+    .vertical-twice-gap-md {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .vertical-gap-md-m {
+        margin-bottom: 50px;
+    }
+    .vertical-gap-md-0 {
+        margin-bottom: 0;
+    }
+  }
+
+  @media only screen and (min-width: 75em) {
+    .vertical-gap-lg-s {
+        margin-bottom: 15px;
+    }
+    .vertical-twice-gap-lg {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .vertical-gap-lg-m {
+        margin-bottom: 48px;
+    }
+    .vertical-gap-lg-0 {
+        margin-bottom: 0;
+    }
+  }

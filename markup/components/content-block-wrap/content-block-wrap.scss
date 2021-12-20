@@ -1,0 +1,42 @@
+.content-block-wrap {
+    width: 100%;
+    min-height: 100%;
+    padding: 15px;
+    background-color: $border-color;
+    border-radius: 8px;
+
+    &--theme {
+        background-color: $border-color-light;
+
+        .content-block-wrap__button {
+            background-color: $page-color;
+
+            svg {
+                color: $light;
+            }
+        }
+        .content-block-wrap__status-bar {
+            color: $light-link;
+            &.status-bar--views {
+                &:before {
+                    @include bg-svg($eye-white);
+                }
+            }
+            &.status-bar--likes {
+                &:before {
+                    @include bg-svg($heart-white);
+                }
+            }
+        }
+        .content-block-wrap__progress {
+            background-color: $light-link;
+        }
+        .content-block-wrap__user {
+            & .user__status,
+            & .user__name {
+                color: $light-link;
+            }
+            color: $light-link;
+        }
+    }
+}

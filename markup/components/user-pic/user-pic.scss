@@ -1,0 +1,23 @@
+.user-pic {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+}
+.user-pic--icon {
+    &::after {
+        @include bg-svg($online);
+        position: absolute;
+        content: "";
+        right: -6px;
+        bottom: 0;
+    }
+}
+.user-pic--header {
+//     margin-right: 0;
+//     margin-left: auto;
+//     width: 50%;
+    cursor: pointer;
+}
+.user-pic--bar {
+    margin: 0 0 10px 0;
+}
